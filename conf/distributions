@@ -1,0 +1,8 @@
+Origin: Spunky Bot
+Label: spunkybot-stable
+Suite: stable
+Codename: stable
+Architectures: i386 amd64
+Components: main
+Description: APT repository for Spunky Bot
+SignWith: 034CE0B1

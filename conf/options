@@ -1,0 +1,3 @@
+verbose
+basedir /var/www/apt.spunkybot.de
+ask-passphrase

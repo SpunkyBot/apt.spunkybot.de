@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spunky Bot APT repository</title>
+  <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+  html, body { font-size: 1em; font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Spunky Bot - Debian/Ubuntu Packages</h1>
+	<p>This is the package repository of Spunky Bot to automate installation and upgrade.</p>
+    <p>The <code>stable</code> channel is updated with stable release builds, follow these instructions to use this repository:</p>
+<pre>
+# Add the release GPG key to your system:
+<strong>wget -qO- https://apt.spunkybot.de/key.asc | sudo apt-key add -</strong>
+
+# Add spunkybot to your APT sources:
+<strong>echo "deb http://apt.spunkybot.de/ stable main" | sudo tee /etc/apt/sources.list.d/spunkybot.list</strong>
+
+# Update your local package index and install spunkybot:
+<strong>sudo apt-get update
+sudo apt-get install spunkybot</strong>
+</pre>
+
+    <hr>
+
+    <p>You can also use the above URLs with <code>https</code> instead of http.</p>
+    <p>However, depending on your distribution, you may see an error similar to the following when running <code>apt-get</code>:</p>
+<pre>
+E: The method driver /usr/lib/apt/methods/https could not be found.
+N: Is the package apt-transport-https installed?
+E: Failed to fetch https://apt.spunkybot.de/dists/spunkybot/InRelease
+</pre>
+
+    <p>If so, please install the <code>apt-transport-https</code> package and try again:</p>
+<pre>
+<strong>sudo apt-get install apt-transport-https</strong>
+</pre>
+
+    <hr>
+
+    <h2>Uninstalling</h2>
+<pre>
+<strong>sudo apt-get remove spunkybot
+sudo rm /etc/apt/sources.list.d/spunkybot.list</strong>
+</pre>
+
+  <hr>
+
+  <h2>GPG Fingerprint</h2>
+  <p>For your reference, the fingerprint of the current GPG key is:</p>
+<pre>
+pub   2048R/7219D501 2017-08-19 [expires: 2021-08-18]
+      Key fingerprint = D812 0CC1 A5F4 4F3A 31FE  AE7F 4D7C FC6D 7219 D501
+uid                  Spunky Bot Automatic Signing Key &lt;debian-release@spunkybot.de&gt;
+sub   2048R/034CE0B1 2017-08-19 [expires: 2021-08-18]
+</pre>
+
+  </div>
+</body>
+</html>

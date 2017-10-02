@@ -1,0 +1,8 @@
+# reprepro
+db
+dists
+incoming
+pool
+
+.well-known
+*.txt
